@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<h1>Activities overview</h1>
+	{% for activity in activities %}
+		<h2>{{activity.name}}</h2>
+		<p>{{activity.description}}<p>
+	{% else %}
+		<p>No activities so far.</p>
+	{% endfor %}
+{% endblock %}
