@@ -137,6 +137,22 @@ a:hover {
 	width: 250px;
 	height: 200px;
 	flex: auto;
+	position: relative;
+}
+
+.tile > .activity-name {
+	position: absolute;
+	bottom: 0;
+
+	color: #000;
+	height: 20%;
+	font-size: 120%;
+	background-color: #BBB;
+	width: 100%;
+}
+
+a.activity:hover > .activity-name{
+	text-decoration: underline;
 }
 
 #footer {
