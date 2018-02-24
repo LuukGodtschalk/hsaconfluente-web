@@ -159,3 +159,17 @@ a.activity:hover > .activity-name{
 	width: 100%;
 	background-color: #EEE;
 }
+
+@media (max-width: 750px) {
+	.index-wrapper {
+		flex-wrap: wrap-reverse;
+	}
+	
+	.index-content {
+		width: auto;
+	}
+	
+	.index-sidebar {
+		width: auto;
+	}
+}
