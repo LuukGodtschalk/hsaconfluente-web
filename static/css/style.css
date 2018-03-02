@@ -1,10 +1,171 @@
-
-#header {
-	width: 100%;
-	background-color: #EEE;
+* {
+	margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+	font-family: Rubik, Arial, Helvetica, sans-serif
 }
 
+.container {
+	display: block;
+	margin: 0 auto;
+	max-width: 1000px
+}
+
+.container--flex {
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between
+}
+
+
+
+
+/* === Structure === */
+
+#header {
+	display: block;
+	position: sticky;
+	top: 0;
+	width: 100%
+}
+#header-logo {
+	white-space: nowrap
+}
+#header-logo a {
+	font-family: inherit;
+  font-size: inherit
+}
+
+.menu {
+	background: inherit;
+	display: inline-block;
+	font-size: 0
+}
+.menu ul {
+	display: block;
+	list-style: none
+}
+.menu__item {
+	color: inherit;
+	display: inline-block;
+	list-style: none;
+	position: relative;
+	text-align: right;
+	white-space: nowrap
+}
+.menu__item > a {
+	color: inherit;
+	display: inline-block;
+	text-decoration: none
+}
+.menu__item--sub,
+.menu__item--sub a {
+	display: block
+}
+.menu--sub {
+	display: none !important;
+	position: absolute;
+	right: 0
+}
+.menu__item:hover .menu--sub {
+	display: block !important;
+}
+
+#ohman {
+  display: none
+}
+
+
+
+@media (max-width:600px){
+
+	#header {
+		overflow-y: auto;
+	}
+
+	.container--flex {
+		flex-wrap: wrap;
+	}
+
+	nav.menu {
+		background: black;
+    display: none;
+		width: 100%;
+		padding-left: 18px;
+		top:48px;
+		height: 100vh
+	}
+
+	.menu__item {
+		display: block;
+		text-align: left
+	}
+
+	.menu .menu__item:not(.menu__item--sub){
+		padding-top: 18px;
+	}
+
+	.menu--sub {
+		display: block !important;
+		position: static;
+		padding-left: 18px
+	}
+
+	.menu__item a {
+		position: static
+	}
+
+	.menu__item:not(.menu__item--sub) {
+		color: #fff
+	}
+
+	#menu__switch {
+    display: inline-block;
+	}
+	#menu__switch:checked ~ nav.menu  {
+		display: block;
+	}
+
+}
+
+
+
+
+/* === Styling === */
+
+#header {
+	background-color: #000;
+	color: white
+}
+
+#header-logo {
+	font-family: 'Rounded Elegance', Rubik, Arial, sans-serif;
+	font-size: 16px
+}
+
+.menu:hover, .menu--sub {
+	color: #bbb
+}
+
+.menu__item:hover {
+	color: #fff
+}
+
+.menu__item--sub a {
+	line-height: 42px
+}
+
+.menu--sub {
+  background: #000
+}
+
+.menu__item > a {
+  font-size: 13px;
+	line-height: 48px;
+	padding: 0 18px
+}
+
+
 #footer {
-	width: 100%;
-	background-color: #EEE;
+	background-color: #EEE
 }
