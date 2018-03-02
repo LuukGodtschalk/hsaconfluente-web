@@ -1,6 +1,35 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>Home</h1>
-The value of foo is {{foo}}.
+<div class="banner"></div>
+<div class="index-wrapper">
+	<div class="index-sidebar">
+		<div class="index-sidebar-buttons">
+			<a class="spyingMedia left" href="//facebook.com"><img src="/img/facebook_100.png"></a>
+			<a class="spyingMedia left" href="//linkedin.com"><img src="/img/linkedin_100.png"></a>
+			<a class="login-btn right" href="/login"><b>Login</b> to access photos and more</a>
+		</div>
+		<h2 class="heading-italic">Announcements</h2>
+		<p>Nis aut et aut restis nobit veliqui doluptiost faccatur a acea incte sinullaborro corro bla ilition sequae nulparum quodis molo earibus repro eum quatia con cullorum es as et peritaquam, ipsande il inctem.</p>
+		<p><a href="/news">Read more</a></p>
+		<br>
+		<p>Nis aut et aut restis nobit veliqui doluptiost faccatur a acea incte sinullaborro corro bla ilition sequae nulparum quodis molo earibus repro eum quatia con cullorum es as et peritaquam, ipsande il inctem.</p>
+		<p><a href="/news">Read more</a></p>
+	</div>
+	<div class="index-content">
+		<p>The Honors Study Association Confluente is the study association of the Honors Academy at the Eindhoven University of Technology. Our aim is to make the experience of all Honors students as enjoyable, educational, fun and enriching as possible. We strive to do so by arranging educational activities, such as lunch lectures, skill trainings, company visits and study trips, as well as fun activities such as monthly drinks, laser questing and pub quizzes for all our members to enjoy.</p>
+		<h3 class="heading-box">Upcoming events</h3>
+		<div class="tiles">
+			{% for event in activities %}
+				<a class="tile activity" href="/activity/{{loop.index - 1}}">
+					<div class="activity-name">{{event.name}}</div>
+				</a>
+			{% endfor %}
+			{% for event in range(0, 4) %}
+				<div class="tile"></div>
+			{% endfor %}
+		</div>
+		<p><a href="/activities">See all</a></p>
+	</div>
+</div>
 {% endblock %}
