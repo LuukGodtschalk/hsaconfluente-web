@@ -70,12 +70,9 @@
 .menu__item:hover .menu--sub {
 	display: block !important;
 }
-
-#ohman {
-  display: none
+#menu__switch, label[for="menu__switch"]{
+	display: none;
 }
-
-
 
 @media (max-width:600px){
 
@@ -118,9 +115,8 @@
 	.menu__item:not(.menu__item--sub) {
 		color: #fff
 	}
-
-	#menu__switch {
-    display: inline-block;
+	label[for="menu__switch"] {
+		display: block
 	}
 	#menu__switch:checked ~ nav.menu  {
 		display: block;
@@ -147,6 +143,16 @@
 	color: #bbb
 }
 
+.menu--sub {
+  background: #000
+}
+
+.menu__item > a {
+  font-size: 13px;
+	line-height: 56px;
+	padding: 0 18px
+}
+
 .menu__item:hover {
 	color: #fff
 }
@@ -154,17 +160,10 @@
 .menu__item--sub a {
 	line-height: 42px
 }
-
-.menu--sub {
-  background: #000
+label[for="menu__switch"] {
+	width: 56px;
+	background-color: rgba(255,255,255,.15)
 }
-
-.menu__item > a {
-  font-size: 13px;
-	line-height: 48px;
-	padding: 0 18px
-}
-
 
 #footer {
 	background-color: #EEE
