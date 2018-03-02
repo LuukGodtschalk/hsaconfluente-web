@@ -1,3 +1,13 @@
+html * {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font-family: "Rubik", Helvetica, sans-serif;
+	line-height: 1.6;
+	vertical-align: baseline;
+	font-weight: normal;
+}
 
 #header {
 	width: 100%;
@@ -7,4 +17,45 @@
 #footer {
 	width: 100%;
 	background-color: #EEE;
+}
+
+h2 {
+	font-size: 150%;
+	font-weight: 500;
+}
+
+h3 {
+	font-size: 120%;
+	font-weight: 500;
+}
+
+.header-links {
+	text-align: right;
+}
+
+.header-links li{
+	display: inline;
+}
+
+img {
+	width: 250px;
+	height: 150px;
+}
+
+.committee-blocks {
+	display: flex;
+}
+
+.block {
+	width: 250px;
+	height: 550px;
+	border-style: solid;
+	border-width: 2px;
+	border-radius: 5px;
+	margin: 15px;
+	position: relative;
+}
+
+.block-info {
+	padding: 5px;
 }
