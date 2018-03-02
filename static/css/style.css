@@ -49,6 +49,10 @@ a:hover {
 	color: #077777;
 }
 
+.view > * {
+	padding: 0 18px;
+}
+
 .container {
 	display: block;
 	margin: 0 auto;
