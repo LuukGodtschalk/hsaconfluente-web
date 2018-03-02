@@ -1,7 +1,7 @@
-{% extends "base.html" %}
+{% extends "page.html" %}
 
-{% block content %}
-<h1>500 - Internal error</h1>
+{% block title %}500 - Internal error{% endblock %}
+{% block view %}
 <b>{{error.code}}</b> - {{error.name}}
 <pre>{{error.stack}}</pre>
 {% endblock %}
