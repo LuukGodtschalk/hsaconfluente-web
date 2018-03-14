@@ -8,3 +8,68 @@
 	width: 100%;
 	background-color: #EEE;
 }
+
+body {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 100;
+	width: auto;
+}
+
+div.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 250px;
+	height: 310px;
+	border-radius: 25px;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+	border-radius: 25px;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.picture {
+	width: 200px;
+	height: 200px;
+	border-radius:25px;
+}
+
+.blocks {
+	display: block;
+	background-color: #002AFF;
+}
+
+.flex {
+	position: relative;
+	background-color: #FF0004;
+}
+
+.logos {
+	display: inline-block;
+	float:left;
+	width: 150px;
+	margin-right: 10px;
+	margin-left: 10px;
+	vertical-align: middle;
+	border-radius: 20px;
+	background-color: #05FF00;
+}
+
+.box {
+	display: inline-block;
+	margin: 5px;
+	width: 880px;
+	background-color: #C700FF;
+}
