@@ -1,11 +1,12 @@
-{% extends "base.html" %}
+{% extends "page.html" %}
 
 {% block content %}
-	<h1>Activities overview</h1>
+<div class="container view">
 	{% for activity in activities %}
 		<h2>{{activity.name}}</h2>
 		<p>{{activity.description}}<p>
 	{% else %}
 		<p>No activities so far.</p>
 	{% endfor %}
+</div>
 {% endblock %}
