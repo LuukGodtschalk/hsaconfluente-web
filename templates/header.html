@@ -1,8 +1,32 @@
 <header id="header">
-	<ul class="header-links">
-		<li><a href="/association">Association</a></li>
-		<li>Education</li>
-		<li>Activities</li>
-		<li>Partners</li>
-	</ul>
+	<div class="container container--flex">
+
+		<div id="header-logo" class="menu__item"><a href="/">H.S.A. Confluente</a></div>
+
+		<input id="menu__switch" type="checkbox">
+		<label class="menu__item" for="menu__switch"><a>Menu</a></label>
+
+		<nav class="menu">
+			<ul>
+				<li class="menu__item">
+					<a href="/activities">Events</a>
+				</li>
+				<li class="menu__item">
+					<a href="/association">Association</a>
+					<ul class="menu menu--sub">
+						<li class="menu__item menu__item--sub"><a href="/association">About Confluente</a></li>
+						<li class="menu__item menu__item--sub"><a href="/boards">Boards</a></li>
+						<li class="menu__item menu__item--sub"><a href="/committees">Committees</a></li>
+					</ul>
+				</li>
+				<li class="menu__item">
+					<a href="/academy">Education</a>
+				</li>
+				<li class="menu__item">
+					<a href="/partners">Partners</a>
+				</li>
+			</ul>
+		</nav>
+
+	</div>
 </header>

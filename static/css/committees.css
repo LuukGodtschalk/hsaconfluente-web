@@ -1,0 +1,94 @@
+/* -- committees */
+
+.block-picture img {
+	width: 250px;
+	height: 150px;
+}
+
+.committee-blocks {
+	display: flex;
+}
+
+.block {
+	width: 250px;
+	height: 550px;
+	border-style: solid;
+	border-width: 2px;
+	border-radius: 5px;
+	margin: 15px;
+	position: relative;
+}
+
+.block-info {
+	padding: 5px;
+}
+
+.blocks {
+	display: block;
+	background-color: #002AFF;
+}
+
+.flex {
+	position: relative;
+	background-color: #FF0004;
+}
+
+.logos {
+	display: inline-block;
+	float:left;
+	width: 150px;
+	margin-right: 10px;
+	margin-left: 10px;
+	vertical-align: middle;
+	border-radius: 20px;
+	background-color: #05FF00;
+}
+
+.box {
+	display: inline-block;
+	margin: 5px;
+	width: 880px;
+	background-color: #C700FF;
+}
+
+.committees {
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.block-picture img {
+	width: 250px;
+	height: 150px;
+}
+
+.committees__head {
+	text-align: center;
+}
+
+.committees__block {
+	width: 300px;
+	height: 30%;
+	border-style: solid;
+	border-width: 2px;
+	border-radius: 5px;
+	margin: 15px;
+	position: relative;
+}
+
+.committees__block--picture img {
+	width: 100%;
+	height: 100%;
+}
+
+.committees__block--info {
+	padding: 18px;
+}
+
+.committees__block--heading {
+	font-weight: 500;
+}

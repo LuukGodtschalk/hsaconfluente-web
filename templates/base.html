@@ -4,15 +4,21 @@
 	<meta charset="UTF-8">
 	<meta content="width=device-width, initial-scale=1" name="viewport">
 	<base href="/"/>
-	<meta name="theme-color" content="#000000">
-	<link rel="stylesheet" href="css/style.css" type="text/css"/>
+	<meta name="theme-color" content="#2a2a2a">
+	<link rel="stylesheet" href="css/main.css" type="text/css"/>
+	<link rel="stylesheet" href="css/header_footer_menu.css" type="text/css"/>
+	<link rel="stylesheet" href="css/frontpage.css" type="text/css"/>
+	<link rel="stylesheet" href="css/committees.css" type="text/css"/>
+	<link rel="stylesheet" href="css/boards.css" type="text/css"/>
+	<link rel="stylesheet" href="css/amar.css" type="text/css"/>
+
 	<script src="/js/bundle.js"></script>
 	<link rel="icon" type="image/png" href="/img/favicon.png"/>
 	<title>{% block title %}H.S.A. Confluente{% endblock %}</title>
 </head>
 <body ng-cloak>
 	{% include "header.html" %}
-	<div id="content" class="content">
+	<div class="content">
 		{% block content %}{% endblock %}
 	</div>
 	{% include "footer.html" %}

@@ -1,6 +1,6 @@
-{% extends "base.html" %}
+{% extends "page.html" %}
 
-{% block content %}
-<h1>404 - Not found</h1>
+{% block title %}404 - Not found{% endblock %}
+{% block view %}
 <p>The page at {{path}} could not be found.</p>
 {% endblock %}
