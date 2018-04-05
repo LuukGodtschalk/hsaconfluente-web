@@ -5,8 +5,8 @@
 <div class="banner"></div>
 <div class="index-wrapper">
   <div class="index-infobox">
-    <p>The Honors Study Association Confluente is the study association of the Honors Academy at the Eindhoven University of Technology. Our aim is to make the experience of all Honors students as enjoyable, educational, fun and enriching as possible. We
-      strive to do so by arranging educational activities, such as lunch lectures, skill trainings, company visits and study trips, as well as fun activities such as monthly drinks, laser questing and pub quizzes for all our members to enjoy.</p>
+    <p>The Honors Study Association Confluente is the study association of the Honors Academy at the Eindhoven University of Technology. Our aim is to make the experience of all Honors students as enjoyable, educational, fun and enriching as possible.
+      We strive to do so by arranging educational activities, such as lunch lectures, skill trainings, company visits and study trips, as well as fun activities such as monthly drinks, laser questing and pub quizzes for all our members to enjoy.</p>
   </div>
   <div class="index-sidebar">
   </div>
@@ -17,7 +17,7 @@
       <a class="spyingMedia left" href="//linkedin.com/"><img src="img/linkedin_100.png"></a>
       <a class="login-btn right" href="/login"><b>Login</b> to access photos and more</a>
     </div>
-    <h2 class="heading-italic">Announcements</h2>
+    <h2>Announcements</h2>
     <p>Nis aut et aut restis nobit veliqui doluptiost faccatur a acea incte sinullaborro corro bla ilition sequae nulparum quodis molo earibus repro eum quatia con cullorum es as et peritaquam, ipsande il inctem.</p>
     <p><a href="/news">Read more</a></p>
     <br>
@@ -29,28 +29,34 @@
     <h2 class="heading-box">Upcoming events</h2>
 
     <div id="frontpage-activities">
-      <ul>
+      <ul id="activity-grid">
 
 				{% for event in activities %}
-				<li class="list-item">
+        <li class="grid__item">
+          <a href="/activity/{{loop.index - 1}}">
 
-          <figure class="list-item__figure"></figure>
-          <div class="list-item__bottom">
-            <h4><a href="/activity/{{loop.index - 1}}">{{event.name}}</a></h4>
-            <p>March 28 | 12:45 | Gaslab</p>
-          </div>
-        </li>
+
+            <figure class="grid__item__figure"></figure>
+            <p class="grid__item__category">{{event.category}}</p>
+            <div class="grid__item__content">
+              <h4>{{event.name}}</h4>
+            </div>
+            <p class="grid__item__details">{{event.details}}</p>
+          </a>
 				{% endfor %}
 
 				{% for event in range(0, 4) %}
-        <li class="list-item">
+        <li class="grid__item">
+          <a href="#">
 
-          <figure class="list-item__figure"></figure>
-          <div class="list-item__bottom">
-            <h4></h4>
-            <p></p>
-          </div>
-        </li>
+
+            <figure class="grid__item__figure"></figure>
+            <p class="grid__item__category">Lunch lecture</p>
+            <div class="grid__item__content">
+              <h4>Innovation Space</h4>
+            </div>
+            <p class="grid__item__details">March 28 | 12:45 | Gaslab</p>
+          </a>
 				{% endfor %}
 
       </ul>
