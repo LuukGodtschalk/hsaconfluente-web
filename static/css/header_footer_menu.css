@@ -35,7 +35,8 @@
 	list-style: none;
 	position: relative;
 	text-align: right;
-	white-space: nowrap
+	white-space: nowrap;
+	z-index: 1;
 }
 .menu__item > a {
 	color: inherit;
@@ -114,7 +115,7 @@
 
 #header-logo {
 	font-family: 'Rounded Elegance', Rubik, Arial, sans-serif;
-	font-size: 16px
+	font-size: 18px
 }
 
 .menu:hover, .menu--sub {
@@ -126,7 +127,7 @@
 }
 
 .menu__item > a {
-  font-size: 13px;
+  font-size: 11pt;
 	line-height: 56px;
 	padding: 0 18px
 }
