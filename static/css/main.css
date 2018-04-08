@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Rubik');
+@import url('https://fonts.googleapis.com/css?family=Rubik:400,500');
 @font-face {
   font-family: "Rounded Elegance";
   src: url(../fonts/Rounded_Elegance.otf);
@@ -65,7 +65,7 @@ h1 {
 h2 {
   font-size: 17px;
   margin: 12px 0 2px 0;
-	font-weight: 600;
+	font-weight: 500;
   text-transform: uppercase;
 }
 
