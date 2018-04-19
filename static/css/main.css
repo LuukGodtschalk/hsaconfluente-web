@@ -121,7 +121,8 @@ a:hover {
 }
 
 .container.view {
-	margin: 18px auto;
+	margin: 27px auto;
+  display: block;
 }
 
 .container--flex {
@@ -140,4 +141,8 @@ a:hover {
 
 .content {
 	flex-grow: 1;
+}
+
+.page-title {
+  margin-top: 0
 }
