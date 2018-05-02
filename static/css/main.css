@@ -31,6 +31,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1.6;
+  min-height: 100vh
 }
 ol, ul {
 	list-style: none;
@@ -80,7 +81,7 @@ h4 {
 	font-weight: 500
 }
 
-p {
+table, p {
 	font-size: 11pt;
 }
 
@@ -105,9 +106,12 @@ a:hover {
 	background: #222;
 	display: inline-block;
 	color: #fff;
+	text-transform: uppercase;
 	padding: 5px 27px 5px 9px;
 	font-size: 12px;
-	margin-bottom: 9px
+	font-weight: 500;
+	margin-bottom: 9px;
+	margin-right: 9px
 }
 
 
@@ -120,7 +124,8 @@ a:hover {
 }
 
 .container.view {
-	margin: 18px auto;
+	margin: 27px auto;
+  display: block;
 }
 
 .container--flex {
@@ -129,6 +134,18 @@ a:hover {
 	justify-content: space-between;
 }
 
+.flex-column {
+	flex-direction: column;
+}
+
 .container.view > * {
 	padding: 0 18px;
+}
+
+.content {
+	flex-grow: 1;
+}
+
+.page-title {
+  margin-top: 0
 }

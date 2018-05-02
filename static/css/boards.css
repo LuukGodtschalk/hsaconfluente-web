@@ -1,39 +1,106 @@
 /* -- boards */
 
 .currentBoardBloack {
-	width: 90%;
-	background-color: #F5F5F5;
-	display: block;
-    margin-left: auto;
-    margin-right: auto;
-	/*text-align:justify;*/
-	/*text-align-last:center;*/
 	display: flex;
-	justify-content: space-between;
+	margin: -12px;
 	flex-wrap: wrap;
+	justify-content: space-around
 }
 
 .floatingImg{
 	display:inline-block;
-    margin-left: auto;
-    margin-right: auto;
-	padding: 5% 5% 5% 5%;
-	background-color: #F0F0F0;
+	margin: 12px;
 }
 
-.centeredImg{
+/*.centeredImg{
 	display: block;
-    margin-left: auto;
-    margin-right: auto;
-	padding: 5% 5% 5% 5%;
+	margin: 9px 0
+}*/
+
+.boardImage {
+	display: inline-flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	max-width: 800px;
+	font-size: 0;
+	margin: -12px
+}
+
+.boardImage .centeredImg {
+	display: inline-block;
+	width: 200px;
+	margin: 12px;
+	height: 100%;
+}
+
+.boardText {
+  display: inline-block;
+	vertical-align: top;
+	margin: -4.5px 0
+}
+.boardText p {
+	padding: 4.5px 0;
+}
+
+.floatingImg .centeredImg {
+	width: 180px
 }
 
 .boardImg{
 	display: block;
-    margin-left: auto;
-    margin-right: auto;
+  width: 100%;
+	margin-bottom: 9px;
 }
 
-.boardDiv{
-	padding: 0% 15% 5% 15%;
+.boardDiv h3{
+  font-style: normal;
+	font-size: 15px;
+	font-weight: normal;
+	margin-top: 27px;
+}
+
+.accent {
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+#currentBoard {
+	background-color: rgba(83, 195, 195, .9);
+	display: block;
+}
+
+#currentBoard .container.view {
+	margin: 0 auto;
+	padding: 27px 0;
+}
+
+#currentBoard h1 {
+	margin-bottom: 18px
+}
+.boardDiv {
+  margin: 36px 0
+}
+.boardDiv th {
+	font-weight: normal;
+	text-align: left;
+	text-transform: uppercase;
+	font-size: 12px
+}
+.board-flex {
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	margin: 0 -18px
+}
+.board-flex > * {
+	margin: 0 18px;
+}
+.board-text {
+	width: 400px;
+	flex-grow: 1;
+}
+.board-img {
+	flex-grow: 1;
+	flex-basis: 350px;
+	max-width: 500px;
 }
