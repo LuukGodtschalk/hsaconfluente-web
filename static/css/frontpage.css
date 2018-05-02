@@ -36,11 +36,21 @@
 	height: 50vh;
 	max-height: 320px;
 	background-color: #53c3c3;
-	background-image: URL("../img/DSC07784.JPG");
 	background-size: cover;
 	background-repeat: no-repeat;
 	image-rendering: optimizespeed;
 	background-position: center center;
+	overflow: hidden;
+}
+
+.banner img {
+	width: 100%;
+	background-color: #53c3c3;
+	background-size: cover;
+	background-repeat: no-repeat;
+	image-rendering: optimizespeed;
+	background-position: center center;
+	transform(-50%, -50%);
 }
 
 .spyingMedia {
