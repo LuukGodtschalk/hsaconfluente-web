@@ -81,7 +81,7 @@ h4 {
 	font-weight: 500
 }
 
-p {
+table, p {
 	font-size: 11pt;
 }
 
@@ -106,9 +106,12 @@ a:hover {
 	background: #222;
 	display: inline-block;
 	color: #fff;
+	text-transform: uppercase;
 	padding: 5px 27px 5px 9px;
 	font-size: 12px;
-	margin-bottom: 9px
+	font-weight: 500;
+	margin-bottom: 9px;
+	margin-right: 9px
 }
 
 
