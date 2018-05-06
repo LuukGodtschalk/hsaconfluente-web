@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<div class="content--grid">
+		<div class="content__sidebar content__sidebar--background">
+		</div>
+
+		<div class="content__sidebar">
+			<h1 class="page-title">Events</h1>
+
+			<ul class="event-list">
+				<li class="event-list__item event-list__item--header">Tuesday 8 May</li>
+
+				{% for event in db-events %}
+				<li class="event-list__item">
+					<a href="/activity/{{loop.index - 1}}">{{event.name}}</a>
+				</li>
+				{% endfor %}
+				<li class="event-list__item">
+					<a href="/activity/0">Monthly drink</a>
+				</li>
+				<li class="event-list__item event-list__item--header">Tuesday 8 May</li>
+				<li class="event-list__item">
+					<a href="/activity/1">Lunch Lecture: Interaction Design</a>
+				</li>
+				<li class="event-list__item">
+					<a href="/activities">Workshop by Frisse Blikken: Cash Cows</a>
+				</li>
+			</ul>
+		</div>
+
+		<div class="content__main">
+
+			<h1 class="page-title">{% block title %}{{file | title}}{% endblock %}</h1>
+
+			{% block view %}{{content | safe}}{% endblock %}
+		</div>
+
+	</div>
+{% endblock %}

@@ -1,8 +1,7 @@
-{% extends "base.html" %}
+{% extends "events.html" %}
 
-{% block content %}
-<div class="container view">
-  <h1>{{activity.name}}</h1>
+{% block title %}{{activity.name}}{% endblock %}
+
+{% block view %}
   <p>{{activity.description}}</p>
-</div>
 {% endblock %}
