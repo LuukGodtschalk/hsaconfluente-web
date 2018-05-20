@@ -64,7 +64,8 @@
 	height: 30px;
 	display: inline-block;
 	font-size: 0;
-	vertical-align: baseline
+	vertical-align: baseline;
+	float: right
 }
 
 .heading-italic {
@@ -199,7 +200,8 @@ a.activity:hover > .activity-name{
 */
 
 .content__main__block {
-	padding: 9px 0;
+	padding-top: 9px;
+	padding-bottom: 9px
 }
 .content__main__block:first-of-type {
 	padding-top: 0

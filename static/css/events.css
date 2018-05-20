@@ -1,3 +1,25 @@
+.flex__filler {
+	flex: auto;
+}
+.content__sidebar-bg {
+	background: rgb(242,242,242);
+}
+.flex--content {
+	height: 100%
+}
+.content__sidebar {
+	flex: 368px;
+	max-width: 368px
+
+}
+.content__main {
+	display: block;
+	flex: 668px;
+	max-width: 668px;
+}
+
+/* Hieronder kan weg */
+
 .content--grid {
 	display: grid;
 	grid-template-columns: auto 368px minmax(0, 668px) auto;
@@ -41,7 +63,7 @@
 .content__header-bg {
 	z-index: -1;
 	grid-column: 1 / -1;
-	
+
 	background: #53c3c3;
 	opacity: .1;
 	grid-row: 1 / 2;

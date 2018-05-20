@@ -25,18 +25,18 @@
 
 </div>
 
-<div class="content--grid content--grid--frontpage">
-  <div class="content__sidebar content__sidebar--background">
-  </div>
+<div class="flex">
 
-  <div class="content__sidebar">
+  <div class="content__sidebar-bg flex__filler"></div>
 
-    <div class="container--flex">
-      <h1 class="page-title page-title--inline hsa">H.S.A. Confluente</h1>
-      <div class="social-media">
-        <a class="social-media__button" href="https://www.facebook.com/hsaconfluentenl/"><img src="img/facebook_100.png"></a>
-        <a class="social-media__button" href="https://www.linkedin.com/company/h.s.a.-confluente/"><img src="img/linkedin_100.png"></a>
-      </div>
+
+  <div class="content__sidebar content__sidebar-bg container--content">
+
+    <h1 class="page-title page-title--inline hsa">H.S.A. Confluente</h1>
+
+    <div class="social-media">
+      <a class="social-media__button" href="https://www.facebook.com/hsaconfluentenl/"><img src="img/facebook_100.png"></a>
+      <a class="social-media__button" href="https://www.linkedin.com/company/h.s.a.-confluente/"><img src="img/linkedin_100.png"></a>
     </div>
 
     <h4 class="event-list__item--header">Announcements</h4>
@@ -48,39 +48,39 @@
 
     <h4 class="event-list__item--header">Quote</h4>
     <p>Oh man this is an almighty quote.</p>
+
   </div>
 
-  <div class="content__main">
+
+  <div class="content__main container--content">
 
     <div class="content__main__block">
-      <!--<p>The Honors Study Association Confluente is the study association of the Honors Academy at the Eindhoven University of Technology. Our aim is to make the experience of all Honors students as enjoyable, educational, fun and enriching as possible.
-        We strive to do so by arranging educational activities, such as lunch lectures, skill trainings, company visits and study trips, as well as fun activities such as monthly drinks, laser questing and pub quizzes for all our members to enjoy.</p>-->
-      <p>Study association of the Honors Academy at Eindhoven University of Technology.
+      <p>Study association of the Honors Academy at Eindhoven University of Technology.</p>
     </div>
 
     <div class="content__main__block">
 
       <h2 class="heading-box">Upcoming events</h2>
-      <a href="/activities">See all</a>
+      <a href="/events">See all</a>
 
       <div id="frontpage-activities">
         <ul id="activity-grid">
 
-  				{% for event in activities %}
+          {% for event in events %}
           <li class="grid__item">
-            <a href="/activity/{{loop.index - 1}}">
+            <a href="/events/{{event.id}}">
 
 
               <figure class="grid__item__figure"></figure>
-              <p class="grid__item__category">{{event.category}}</p>
+              <p class="grid__item__category">{{event.Category}}</p>
               <div class="grid__item__content">
-                <h4>{{event.name}}</h4>
+                <h4>{{event.Name}}</h4>
               </div>
-              <p class="grid__item__details">{{event.details}}</p>
+              <p class="grid__item__details">{{event.Details}}</p>
             </a>
-  				{% endfor %}
+          {% endfor %}
 
-  				{% for event in range(0, 4) %}
+          {% for event in range(0, 4) %}
           <li class="grid__item">
             <a href="#">
 
@@ -92,12 +92,16 @@
               </div>
               <p class="grid__item__details">March 28 | 12:45 | Gaslab</p>
             </a>
-  				{% endfor %}
+          {% endfor %}
 
         </ul>
       </div>
     </div>
+
   </div>
+
+
+  <div class="flex__filler"></div>
 
 </div>
 
