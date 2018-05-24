@@ -31,7 +31,8 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1.6;
-  min-height: 100vh
+  min-height: 100vh;
+  height: 0
 }
 ol, ul {
 	list-style: none;
@@ -48,7 +49,10 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
+pre {
+  background: #f2f2f2;
+  overflow: auto;
+}
 
 /* Main styles */
 
@@ -57,10 +61,10 @@ table {
 }
 
 h1 {
-	font-size: 24px;
+	font-size: 25px;
 
   font-weight: 500;
-  margin: 18px 0 6px 0
+  margin: 32px 0 24px 0
 }
 
 h2 {
@@ -81,7 +85,7 @@ h4 {
 	font-weight: 500
 }
 
-table, p {
+table, p, pre, a {
 	font-size: 11pt;
 }
 
@@ -123,23 +127,30 @@ a:hover {
 	max-width: 1036px
 }
 
-.container.view {
-	margin: 27px auto;
-  display: block;
+.container--content {
+  padding: 32px 0;
+}
+
+.container--view {
+	margin: 32px auto;
+}
+
+.container--content > *, .container--view > * {
+	padding: 0 18px;
 }
 
 .container--flex {
+  flex: 1036px
+}
+
+.flex {
 	display: flex;
 	flex-wrap: nowrap;
 	justify-content: space-between;
 }
 
-.flex-column {
+.flex--column {
 	flex-direction: column;
-}
-
-.container.view > * {
-	padding: 0 18px;
 }
 
 .content {
@@ -147,5 +158,10 @@ a:hover {
 }
 
 .page-title {
-  margin-top: 0
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+.page-title--inline {
+	display: inline-block
 }

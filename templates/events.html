@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<div class="flex flex--content">
+
+		<div class="content__sidebar-bg flex__filler"></div>
+
+
+		<div class="content__sidebar content__sidebar-bg container--content">
+			<h1 class="page-title">Events</h1>
+
+			<ul class="event-list">
+
+				<li class="event-list__item event-list__item--header">Tuesday 8 May</li>
+
+				{% for event in events %}
+				<li class="event-list__item">
+					<a href="/events/{{event.id}}">{{event.Name}}</a>
+				</li>
+				{% endfor %}
+
+			</ul>
+
+		</div>
+
+
+		<div class="content__main container--content">
+
+				<h1 class="page-title page-title--inline">{% block title %}{{file | title}}{% endblock %}</h1>
+
+				<div class="social-media">
+					{% block buttons %}{{content | safe}}{% endblock %}
+				</div>
+
+				{% block view %}{{content | safe}}{% endblock %}
+
+		</div>
+
+
+		<div class="flex__filler"></div>
+
+	</div>
+	
+{% endblock %}

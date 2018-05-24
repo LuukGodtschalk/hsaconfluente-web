@@ -1,12 +1,1 @@
-{% extends "page.html" %}
-
-{% block content %}
-<div class="container view">
-	{% for activity in activities %}
-		<h2>{{activity.name}}</h2>
-		<p>{{activity.description}}<p>
-	{% else %}
-		<p>No activities so far.</p>
-	{% endfor %}
-</div>
-{% endblock %}
+{% extends "events.html" %}
