@@ -3,28 +3,10 @@
 {% block content %}
 
 <div class="banner">
-  <img class="mySlides w3-animate-fading" src="img/DSC07784.JPG">
-  <img class="mySlides w3-animate-fading" src="img/IntroWeekend2017.jpg">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
-  <script>
-  var myIndex = 0;
-  carousel();
-
-  function carousel() {
-      var i;
-      var x = document.getElementsByClassName("mySlides");
-      for (i = 0; i < x.length; i++) {
-         x[i].style.display = "none";
-      }
-      myIndex++;
-      if (myIndex > x.length) {myIndex = 1}
-      x[myIndex-1].style.display = "block";
-      setTimeout(carousel, 9000);
-  }
-  </script>
-
+  <img id="p1" src="img/DSC07784.JPG">
+  <img id="p2" src="img/IntroWeekend2017.jpg">
 </div>
+
 <div class="index-wrapper">
   <div class="index-infobox">
     <p>The Honors Study Association Confluente is the study association of the Honors Academy at the Eindhoven University of Technology. Our aim is to make the experience of all Honors students as enjoyable, educational, fun and enriching as possible.
