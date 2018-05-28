@@ -1,8 +1,13 @@
-{% extends "base.html" %}
+{% extends "events.html" %}
 
-{% block content %}
-<div class="container view">
-  <h1>{{activity.name}}</h1>
-  <p>{{activity.description}}</p>
-</div>
+{% block title %}{{event.Name}}{% endblock %}
+
+{% block buttons %}
+    {% if event.Link_fb %}<a class="social-media__button" href="{{event.Link_fb}}"><img src="img/facebook_100.png"></a>{% endif %}
+{% endblock %}
+
+{% block view %}
+  {% if event.Image %}<img src="{{event.Image}}" />{% endif %}
+  <p>{{event.Description}}</p>
+  {% if event.Link_subscription %}<a href="{{event.Link_subscription}}"><button class="button">Sign up now!</button></a>{% endif %}
 {% endblock %}

@@ -14,60 +14,86 @@
   </div>
   <div class="index-sidebar">
   </div>
+</div>
 
-  <div class="index-sidebar-content">
-    <div class="index-sidebar-buttons">
-      <a class="spyingMedia left" href="//facebook.com/"><img src="img/facebook_100.png"></a>
-      <a class="spyingMedia left" href="//linkedin.com/"><img src="img/linkedin_100.png"></a>
-      <a class="login-btn right" href="/login"><b>Login</b> to access photos and more</a>
-    </div>
-    <h2>Announcements</h2>
-    <p>Nis aut et aut restis nobit veliqui doluptiost faccatur a acea incte sinullaborro corro bla ilition sequae nulparum quodis molo earibus repro eum quatia con cullorum es as et peritaquam, ipsande il inctem.</p>
-    <p><a href="/news">Read more</a></p>
-    <br>
-    <p>Nis aut et aut restis nobit veliqui doluptiost faccatur a acea incte sinullaborro corro bla ilition sequae nulparum quodis molo earibus repro eum quatia con cullorum es as et peritaquam, ipsande il inctem.</p>
-    <p><a href="/news">Read more</a></p>
-  </div>
-  <div class="index-content">
+<div class="flex">
 
-    <h2 class="heading-box">Upcoming events</h2>
-
-    <div id="frontpage-activities">
-      <ul id="activity-grid">
-
-				{% for event in activities %}
-        <li class="grid__item">
-          <a href="/activity/{{loop.index - 1}}">
+  <div class="content__sidebar-bg flex__filler"></div>
 
 
-            <figure class="grid__item__figure"></figure>
-            <p class="grid__item__category">{{event.category}}</p>
-            <div class="grid__item__content">
-              <h4>{{event.name}}</h4>
-            </div>
-            <p class="grid__item__details">{{event.details}}</p>
-          </a>
-				{% endfor %}
+  <div class="content__sidebar content__sidebar-bg container--content">
 
-				{% for event in range(0, 4) %}
-        <li class="grid__item">
-          <a href="#">
+    <h1 class="page-title page-title--inline hsa">H.S.A. Confluente</h1>
 
-
-            <figure class="grid__item__figure"></figure>
-            <p class="grid__item__category">Lunch lecture</p>
-            <div class="grid__item__content">
-              <h4>Innovation Space</h4>
-            </div>
-            <p class="grid__item__details">March 28 | 12:45 | Gaslab</p>
-          </a>
-				{% endfor %}
-
-      </ul>
+    <div class="social-media">
+      <a class="social-media__button" href="https://www.facebook.com/hsaconfluentenl/"><img src="img/facebook_100.png"></a>
+      <a class="social-media__button" href="https://www.linkedin.com/company/h.s.a.-confluente/"><img src="img/linkedin_100.png"></a>
     </div>
 
-		<p><a href="/activities">See all</a></p>
+    <h4 class="event-list__item--header">Announcements</h4>
+    <p>Nis aut et aut restis nobit veliqui doluptiost faccatur a acea incte sinullaborro corro bla ilition sequae nulparum quodis molo earibus repro eum quatia con cullorum es as et peritaquam, ipsande il inctem. <a href="http://dev.godtschalk.net:2412/news">Read more</a></p>
+    <p>Nis aut et aut restis nobit veliqui doluptiost faccatur a acea incte sinullaborro corro bla ilition sequae nulparum quodis molo earibus repro eum quatia con cullorum es as et peritaquam, ipsande il inctem. <a href="http://dev.godtschalk.net:2412/news">Read more</a></p>
+
+    <h4 class="event-list__item--header">Poll</h4>
+    <p>Nis aut et aut restis nobit veliqui doluptiost faccatur a acea incte sinullaborro corro bla ilition sequae nulparum quodis molo earibus repro eum quatia con cullorum es as et peritaquam, ipsande il inctem.</p>
+
+    <h4 class="event-list__item--header">Quote</h4>
+    <p>Oh man this is an almighty quote.</p>
+
   </div>
+
+
+  <div class="content__main container--content">
+
+    <div class="content__main__block">
+      <p>Study association of the Honors Academy at Eindhoven University of Technology.</p>
+    </div>
+
+    <div class="content__main__block">
+
+      <h2 class="heading-box">Upcoming events</h2>
+      <a href="/events">See all</a>
+
+      <div id="frontpage-activities">
+        <ul id="activity-grid">
+
+          {% for event in events %}
+          <li class="grid__item">
+            <a href="/events/{{event.id}}">
+
+
+              <figure class="grid__item__figure"></figure>
+              <p class="grid__item__category">{{event.Category}}</p>
+              <div class="grid__item__content">
+                <h4>{{event.Name}}</h4>
+              </div>
+              <p class="grid__item__details">{{event.Details}}</p>
+            </a>
+          {% endfor %}
+
+          {% for event in range(0, 4) %}
+          <li class="grid__item">
+            <a href="#">
+
+
+              <figure class="grid__item__figure"></figure>
+              <p class="grid__item__category">Lunch lecture</p>
+              <div class="grid__item__content">
+                <h4>Innovation Space</h4>
+              </div>
+              <p class="grid__item__details">March 28 | 12:45 | Gaslab</p>
+            </a>
+          {% endfor %}
+
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="flex__filler"></div>
+
 </div>
 
 {% endblock %}
