@@ -106,14 +106,18 @@
 	margin-top: 5%;
 }
 
-.sisterassociations img {
-	margin: 20px 20px 50px 20px;
-	width: 20%;
-	float: left;
+.sisterassociations__block img {
+	width: 100%;
 }
 
 .ASML__factsblock img {
 	width: 30%;
 	float: left;
 	margin: 50px 50px 50px 20px;
+}
+
+.sisterassociations__block {
+	margin: 20px 20px 50px 20px;
+	float: left;
+	width: 20%;
 }
