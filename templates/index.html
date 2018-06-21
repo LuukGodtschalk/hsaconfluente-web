@@ -22,7 +22,7 @@
     </div>
 
     <h4 class="event-list__item--header">Announcements</h4>
-    <p>Welkom to the brand new site of H.S.A Confluente!</p><br>
+    <p>Welcome to the brand new site of H.S.A Confluente!</p><br>
     <p>The Intro Committee is looking for new members. Join and organise the best weekend of the year! <a href="/committees"> &nbsp;Read more</a></p>
 
     <h4 class="event-list__item--header">Poll</h4>
@@ -40,45 +40,20 @@
       <p>Study association of the Honors Academy at Eindhoven University of Technology.</p>
     </div>
 
-    <div class="content__main__block">
-
-      <h2 class="heading-box">Upcoming events</h2>
-      <a href="/events">See all</a>
-
-      <div id="frontpage-activities">
-        <ul id="activity-grid">
-
-          {% for event in events %}
-          <li class="grid__item">
+    <div class="row">
+    	{% for event in events %}
+           <div class="column">
             <a href="/events/{{event.id}}">
 
-
               <figure class="grid__item__figure"></figure>
-              <p class="grid__item__category">{{event.Category}}</p>
               <div class="grid__item__content">
-                <h4>{{event.Name}}</h4>
+                <img src="{{event.Image}}" / class="event_image">
               </div>
-              <p class="grid__item__details">{{event.Details}}</p>
             </a>
+		</div>
           {% endfor %}
-
-          {% for event in range(0, 4) %}
-          <li class="grid__item">
-            <a href="#">
-
-
-              <figure class="grid__item__figure"></figure>
-              <p class="grid__item__category">Lunch lecture</p>
-              <div class="grid__item__content">
-                <h4>Innovation Space</h4>
-              </div>
-              <p class="grid__item__details">March 28 | 12:45 | Gaslab</p>
-            </a>
-          {% endfor %}
-
-        </ul>
-      </div>
-    </div>
+		
+	  </div>
 
   </div>
 

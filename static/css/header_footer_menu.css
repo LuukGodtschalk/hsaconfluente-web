@@ -23,7 +23,8 @@
 .menu {
 	background: inherit;
 	display: inline-block;
-	font-size: 0
+	font-size: 0;
+	text-align: center;
 }
 .menu ul {
 	display: block;
@@ -115,7 +116,8 @@
 
 #header-logo {
 	font-family: 'Rounded Elegance', Rubik, Arial, sans-serif;
-	font-size: 18px
+	font-size: 18px;
+	text-align: center;
 }
 
 .menu:hover, .menu--sub {
@@ -148,26 +150,15 @@ label[for="menu__switch"] {
 
 /* === Responsive === */
 
+
 @media (max-width: 750px) {
-	
+
 	.footer__item {
 		text-align: center !important;
 	}
 
-	#footer .container--flex {
-		flex-direction: column
-	}
-
-}
-
-@media (max-width: 600px) {
-
-	#header {
-		overflow-y: auto;
-	}
-
-	.container--flex {
-		flex-wrap: wrap;
+	.flex {
+		flex-direction: column;
 	}
 
 	nav.menu {
@@ -210,4 +201,6 @@ label[for="menu__switch"] {
 		display: block;
 	}
 
+	.content__sidebar {
+    max-width: unset !important;
 }
