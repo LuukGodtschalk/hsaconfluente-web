@@ -86,3 +86,34 @@
 .committees__block--heading {
 	font-weight: 500;
 }
+
+
+
+/* -- partners */
+.partner__block--picture img {
+	float: left;
+	width: 250px;
+	height: 150px;
+	margin-right: 30px;
+}
+}
+
+.partner__block--info {
+	float: right;
+}
+
+.sisterassociations {
+	margin-top: 5%;
+}
+
+.sisterassociations img {
+	margin: 20px 20px 50px 20px;
+	width: 20%;
+	float: left;
+}
+
+.ASML__factsblock img {
+	width: 30%;
+	float: left;
+	margin: 50px 50px 50px 20px;
+}
