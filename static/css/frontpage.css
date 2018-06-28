@@ -1,40 +1,5 @@
-.index-wrapper {
-	width: 100%;
-	height: 100%;
-	display: grid;
-	grid-template-columns: 1fr 368px minmax(0, 668px) 1fr;
-}
-
-.index-wrapper > * {
-	padding: 18px;
-}
-
-.index-infobox {
-	grid-column: 3 / 4;
-  grid-row: 1;
-}
-
-.index-sidebar {
-	z-index: -1;
-	grid-column: 1 / 3;
-	grid-row: 1 / 3;
-	background: rgb(242,242,242);
-}
-
-.index-sidebar-content {
-	grid-column: 2 / 3;
-	grid-row: 1 / 3;
-}
-.index-content {
-	grid-column: 3 / 4;
-	grid-row: 2;
-
-	padding-top: 0;
-}
-
 .banner {
   position: relative;
-
   width: 100%;
 	height: 50vh;
 	max-height: 320px;
@@ -52,7 +17,6 @@
   animation-name: fade;
   animation-iteration-count: infinite;
   animation-duration: 40s;
-
   width: 100%;
 	background-color: #53c3c3;
 	background-size: cover;
@@ -79,14 +43,8 @@
   animation-delay: -20s;
 }
 
-.social-media__button img {
-	height: 100%;
-	margin: 0 6px
 
-}
-.social-media__button img:last-of-type {
-	margin-right: 0
-}
+/* Buttons */
 
 .social-media {
 	height: 30px;
@@ -96,133 +54,17 @@
 	float: right
 }
 
-.heading-italic {
-	/*! font-style: italic; */
-}
-
-a.activity:hover > .activity-name{
-	text-decoration: underline;
-}
-
-#activity-grid {
-	display: grid;
-  grid-gap: 9px;
-	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-}
-
-#activity-grid .grid__item {
-	width: 100%;
-	background-color: aqua;
-}
-
-#activity-grid .grid__item > a {
-	display: inline-grid;
-	/* grid-template-rows: 40px 1fr 40px; */
-	width: 100%;
-	grid-gap: 9px;
-	/* align-items: center; */
-}
-
-#activity-grid .grid__item p {
-	font-size: 12px;
-	padding: 0 9px
-}
-
-#activity-grid .grid__item__category {
-	grid-row: 1 / 2;
-	grid-column: 1 / 2;
-}
-#activity-grid .grid__item__content {
-	grid-row: 2 / -2;
-	grid-column: 1 / 2;
-	padding: 0 9px
-}
-#activity-grid .grid__item__details {
-	grid-row: -2 / -1;
-	grid-column: 1 / 2;
-}
-
-#activity-grid .grid__item__figure {
+.social-media__button img {
 	height: 100%;
-	width: 100%;
-  grid-row: 1 / -1;
-	grid-column: 1 / -1;
-	text-decoration: none;
-	color: unset;
+	margin: 0 6px
+
+}
+.social-media__button img:last-of-type {
+	margin-right: 0
 }
 
 
-/*
-#activity-grid .grid__item > a {
-	display: flex;
-	height: 100%;
-	flex-direction: column;
-	text-decoration: none;
-	color: unset;
-	padding: 15px;
-}
-
-#activity-grid .grid__item__content {
-	height: 100%;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-}
-
-#activity-grid .grid__item__content > * {
-	display: inline-block;
-	width: auto;
-}
-
-#activity-grid p {
-	font-size: 12px;
-}
-*/
-
-
-
-
-/* #frontpage-activities .list-item {
-
-  background-color: #ededed;
-	min-height: 150px;
-}
-
-.activity-grid__item > * {
-	margin: 9px;
-}
-
-.activity-grid__item a {
-	text-decoration: none;
-	color: unset;
-}
-.activity-grid__item h4 {
-	font-size: 16px;
-	line-height: 22px;
-	font-weight: 400;
-	margin-top: auto;
-	padding: 4px 9px;
-	background-color: #fff;
-	display: inline-block
-}
-.activity-grid__item p {
-	display: inline-block;
-	margin: 0;
-	font-size: 12px;
-	background-color: #2a2a2a;
-	color: #fff;
-	padding: 4px 9px;
-}
-
-.list-item__bottom {
-  display: block
-}
-
-.list-item__figure {
-	background-color: #e7e6e6;
-}
-
-*/
+/* Content frontpage */
 
 .content__main__block {
 	padding-top: 9px;
@@ -235,45 +77,24 @@ a.activity:hover > .activity-name{
 	padding-bottom: 0
 }
 
-@media (max-width: 750px) {
-	.index-wrapper {
-		display: flex;
-		flex-direction: column;
-	}
-	.index-infobox {
-		background-color: #e7e6e6
-	}
-	.index-sidebar {
-		padding: 0;
-	}
-	.index-sidebar-content {
-		background: unset;
-	}
-	.index-content {
-		padding-top: 10px;
-	}
+
+.event-list {
+	margin-left: -4px;
+	margin-right: -4px
 }
 
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0 4px;
+.event-list__item {
+	flex: 50%;
+	font-size: 0;
+	padding: 4px
+}
+.event-list__item a {
+	font-size: 0
 }
 
-/* Create four equal columns that sits next to each other */
-.column {
-  flex: 50%;
-  width: 100%;
-  padding: 0 4px;
-}
-
-.column img {
-  vertical-align: middle;
-}
-
-@media screen and (max-width: 600px) {
-  .column {
-    flex: 100%;
-    max-width: 100%;
-  }
+.event-list__item__image {
+	background: #2a2a2a;
+	height: 100%;
+	width: 100%;
+	display: block;
 }

@@ -1,5 +1,4 @@
 {% extends "base.html" %}
-
 {% block content %}
 
 <div class="banner">
@@ -7,13 +6,12 @@
   <img id="p2" src="img/IntroWeekend2017.jpg">
 </div>
 
+
 <div class="flex">
 
   <div class="content__sidebar-bg flex__filler"></div>
 
-
   <div class="content__sidebar content__sidebar-bg container--content">
-
     <h1 class="page-title page-title--inline hsa">H.S.A. Confluente</h1>
 
     <div class="social-media">
@@ -21,14 +19,19 @@
       <a class="social-media__button" href="https://www.linkedin.com/company/h.s.a.-confluente/"><img src="img/linkedin_100.png"></a>
     </div>
 
-    <h4 class="event-list__item--header">Announcements</h4>
-    <p>Welcome to the brand new site of H.S.A Confluente!</p><br>
-    <p>The Intro Committee is looking for new members. Join and organise the best weekend of the year! <a href="/committees"> &nbsp;Read more</a></p>
+    <h4 class="content__sidebar__header">Announcements</h4>
+		<ul>
+    	<li><p>Welcome to the brand new site of H.S.A Confluente!</p></li>
+			<li>
+				<p>The Intro Committee is looking for new members. Join and organise the best weekend of the year!</p>
+				<a href="/committees">Read more</a>
+			</li>
+		</ul>
 
-    <h4 class="event-list__item--header">Poll</h4>
-	  <p>Let's give the Web Committee their own mugs or t-shirt? <a target="_blank" href="https://goo.gl/forms/WsaAW4zqP2BVs6ID2"> &nbsp;Vote here!</a></p>
+    <h4 class="content__sidebar__header">Poll</h4>
+	  <p>Let's give the Web Committee their own mugs or t-shirt? <a target="_blank" href="https://goo.gl/forms/WsaAW4zqP2BVs6ID2">Vote here!</a></p>
 
-    <h4 class="event-list__item--header">Quote</h4>
+    <h4 class="content__sidebar__header">Quote</h4>
     <p>"Oh man this is an almighty quote."</p>
 
   </div>
@@ -37,23 +40,21 @@
   <div class="content__main container--content">
 
     <div class="content__main__block">
-      <p>Study association of the Honors Academy at Eindhoven University of Technology.</p>
+		<p>Study association of the Honors Academy at Eindhoven University of Technology.</p>
     </div>
 
-    <div class="row">
-    	{% for event in events %}
-           <div class="column">
-            <a href="/events/{{event.id}}">
-
-              <figure class="grid__item__figure"></figure>
-              <div class="grid__item__content">
-                <img src="{{event.Image}}" / class="event_image">
-              </div>
-            </a>
-		</div>
-          {% endfor %}
-		
-	  </div>
+	<div class="content__main__block">
+	<h2 class="heading-box">Upcoming events</h2>
+		<ul class="event-list flex flex--wrap">
+			{% for event in events %}
+			<li class="event-list__item">
+				<a href="/events/{{event.id}}">
+					<img src="{{event.Image}}" class="event-list__item__image" />
+				</a>
+			</li>
+			{% endfor %}
+		</ul>
+	</div>
 
   </div>
 

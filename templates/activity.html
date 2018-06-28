@@ -7,7 +7,7 @@
 {% endblock %}
 
 {% block view %}
-  {% if event.Image %}<img src="{{event.Image}}" / class="event_image">{% endif %}
+  {% if event.Image %}<img src="{{event.Image}}" class="event_image">{% endif %}
   <p class="event_desc">{{event.Description}}</p>
   {% if event.Link_subscription %}<a href="{{event.Link_subscription}}" target="_blank"><button class="button">Sign up now!</button></a>{% endif %}
 {% endblock %}
