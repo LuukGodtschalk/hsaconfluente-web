@@ -17,11 +17,13 @@
 	<link rel="icon" type="image/png" href="/img/favicon.png"/>
 	<title>{% block title %}H.S.A. Confluente{% endblock %}</title>
 </head>
-<body class="body flex flex--column" ng-cloak>
+<body ng-cloak>
+	<div class="body flex flex--column">
 	{% include "header.html" %}
-	<div class="content">
-		{% block content %}{% endblock %}
+		<div class="content">
+			{% block content %}{% endblock %}
+		</div>
+		{% include "footer.html" %}
 	</div>
-	{% include "footer.html" %}
 </body>
 </html>
