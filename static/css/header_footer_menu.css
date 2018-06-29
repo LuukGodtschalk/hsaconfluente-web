@@ -160,6 +160,10 @@ label[for="menu__switch"] {
 	.flex {
 		flex-direction: column;
 	}
+	
+	.flex--row {
+		flex-direction: row
+	}
 
 	nav.menu {
 		background: #2a2a2a;
@@ -203,4 +207,9 @@ label[for="menu__switch"] {
 
 	.content__sidebar {
     max-width: unset !important;
+    }
+    
+   .content__main--front {
+   order: -1
+   }
 }
