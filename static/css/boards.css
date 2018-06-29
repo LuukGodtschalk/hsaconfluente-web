@@ -1,3 +1,12 @@
+.list {
+	margin: -9px 0
+}
+
+.list__item {
+	margin: 9px 0;
+}
+
+
 /* -- boards */
 
 .boardImg--current {
@@ -24,14 +33,23 @@
 	height: 100%;
 }
 
-.boardText {
+.board-hero {
+	margin: -9px
+}
+
+.board-hero__item {
+	padding: 9px;
+	white-space: nowrap
+}
+
+/*.boardText {
 	width: 300px;
 	margin: -4.5px 18px;
 
 }
 .boardText p {
 	padding: 4.5px 0;
-}
+}*/
 
 .floatingImg .centeredImg {
 	width: 180px

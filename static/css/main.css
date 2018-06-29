@@ -17,11 +17,11 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-  border: 0;
-  box-sizing: border-box;
-  font-size: 100%;
-  font-style: initial;
-  margin: 0;
+	border: 0;
+	box-sizing: border-box;
+	font-size: 100%;
+	font-style: initial;
+	margin: 0;
 	padding: 0;
 	vertical-align: baseline;
 }
@@ -30,9 +30,7 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1.6;
-  min-height: 100vh;
-  height: 0
+	line-height: 1.6
 }
 ol, ul {
 	list-style: none;
@@ -62,7 +60,6 @@ pre {
 
 h1 {
 	font-size: 25px;
-
   font-weight: 500;
   margin: 32px 0 24px 0
 }
@@ -76,7 +73,7 @@ h2 {
 
 h3 {
 	font-size: 16px;
-  	margin: 12px 0 0 0;
+	margin: 12px 0 0 0;
 	font-weight: 500;
 	font-style: italic;
 }
@@ -121,27 +118,31 @@ a:hover {
 
 /* Page setup */
 
+.body {
+	min-height: 100vh
+}
+
 .container {
 	display: block;
 	margin: 0 auto;
 	max-width: 1036px
 }
 
-.container--content {
-  padding: 32px 0;
-}
+	.container--content {
+		padding: 32px 0;
+	}
 
-.container--view {
-	margin: 32px auto;
-}
+	.container--view {
+		margin: 32px auto;
+	}
 
-.container--content > *, .container--view > * {
-	padding: 0 18px;
-}
+	.container--content > *, .container--view > * {
+		padding: 0 18px;
+	}
 
-.container--flex {
-  flex: 1036px
-}
+	.container--flex {
+		flex: 1036px
+	}
 
 .flex {
 	display: flex;
@@ -149,9 +150,22 @@ a:hover {
 	justify-content: space-between;
 }
 
-.flex--column {
-	flex-direction: column;
+	.flex--column {
+		flex-direction: column;
+	}
+
+	.flex--wrap {
+		flex-wrap: wrap;
+	}
+
+	.flex--content {
+		height: 100%
+	}
+
+.flex__filler {
+	flex: auto;
 }
+
 
 .content {
 	flex-grow: 1;
@@ -162,6 +176,6 @@ a:hover {
   margin-bottom: 24px;
 }
 
-.page-title--inline {
-	display: inline-block
-}
+	.page-title--inline {
+		display: inline-block
+	}
