@@ -38,6 +38,7 @@
 	text-align: right;
 	white-space: nowrap;
 	z-index: 1;
+	font-weight: 500
 }
 .menu__item > a {
 	color: inherit;
@@ -145,6 +146,12 @@
 label[for="menu__switch"] {
 	flex: 1 1;
 	text-align: right
+}
+
+/* -- transition */
+
+.menu__item {
+	transition: color .2s ease-out
 }
 
 
