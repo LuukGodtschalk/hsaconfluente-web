@@ -47,11 +47,13 @@
 	<h2 class="heading-box">Upcoming events</h2>
 		<ul class="event-list flex flex--wrap">
 			{% for event in events %}
-			<li class="event-list__item">
-				<a href="/events/{{event.id}}">
-					<img src="{{event.Image}}" class="event-list__item__image" />
-				</a>
-			</li>
+				{% if event.Active == 1 %}
+					<li class="event-list__item">
+						<a href="/events/{{event.id}}">
+							<img src="{{event.Image}}" class="event-list__item__image" />
+						</a>
+					</li>
+				{% endif %}
 			{% endfor %}
 		</ul>
 	</div>
